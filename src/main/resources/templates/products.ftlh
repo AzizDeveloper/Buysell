@@ -13,10 +13,18 @@
     <hr>
 
     <h4>All Products</h4>
+
+    <form action="/" method="get">
+        Searching for title advertisement: <input type="text" name="title"><br>
+        <input type="submit" value="Search"/>
+    </form>
+
     <#list products as product>
         <div>
             <p><b>${product.title}</b> ${product.price} sum. | <a href="/product/${product.id}">About</a></p>
         </div>
+        <#else>
+        <h3>No Products</h3>
     </#list>
 
     <hr>
