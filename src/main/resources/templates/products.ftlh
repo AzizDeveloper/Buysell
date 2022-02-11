@@ -9,7 +9,22 @@
 </head>
 <body>
 
-    Hello, BUYSELL
+    <h1>BUYSELL</h1>
+    <hr>
+
+    <h4>All Products</h4>
+    <#list products as product>
+        <div>
+            <p><b>${product.title}</b> ${product.price} | <a href="/product/${product.id}">About</a></p>
+        </div>
+    </#list>
+
+    <hr>
+<h3>Create new product</h3>
+<form action="/product/create" method="post">
+    Title: <input type="text" name="title">
+</form>
+
 
 </body>
 </html>
