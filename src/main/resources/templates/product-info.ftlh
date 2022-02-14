@@ -8,11 +8,11 @@
     <title>BUYSELL</title>
 </head>
 <body>
-
-<h1>BUYSELL</h1>
-<hr>
-
+<h1>BUYSELL</h1><hr>
 <h4>Product details</h4>
+<#list images as img>
+    <img src="/images/${img.id}" height="60px"/><br><br>
+</#list>
     <b>Product title: </b>${product.title}<br>
     <b>Product description: </b>${product.description}<br>
     <b>Price: </b>${product.price}<br>

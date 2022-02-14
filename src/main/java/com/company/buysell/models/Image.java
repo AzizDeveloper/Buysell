@@ -3,6 +3,7 @@ package com.company.buysell.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
@@ -27,7 +28,9 @@ public class Image {
     private String contentType;
     @Column(name = "isPreviewImage")
     private boolean isPreviewImage;
+
     @Lob
+    @Type(type = "org.hibernate.type.ImageType")
     private byte[] bytes;
 
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
