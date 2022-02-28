@@ -4,7 +4,7 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1><a href="/">BUYSELL</a></h1>
 <h3>Detailed information about the user ${user.name}</h3>
 <b>Phone number:</b> ${user.phoneNumber}<br>
 <b>Email</b> ${user.email}<br>

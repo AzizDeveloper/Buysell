@@ -8,7 +8,7 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1>
+<h1><a href="/">BUYSELL</a></h1>
 <hr>
 <h4>Product details</h4>
 <#list images as img>
@@ -18,6 +18,6 @@
 <b>Product description: </b>${product.description}<br>
 <b>Price: </b>${product.price}<br>
 <b>City: </b>${product.city}<br>
-<b>Author: </b> <a href="/user/${product.user.id}">${product.user.name}</a>${product.user.name}<br>
+<b>Author: </b> <a href="/user/${product.user.id}">${product.user.name}</a><br>
 </body>
 </html>

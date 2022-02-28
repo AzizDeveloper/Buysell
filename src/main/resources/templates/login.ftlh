@@ -4,7 +4,7 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1><a href="/">BUYSELL</a></h1><hr>
 <h4>Authorization</h4>
 <form action="/login" method="post">
     Эл. почта: <input type="email" name="username"><br><br>
