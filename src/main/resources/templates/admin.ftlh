@@ -8,11 +8,11 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1>
+<h1><a href="/">BUYSELL</a></h1>
 <hr>
 <h4>Admins panel</h4>
 
-<table>
+<table border="1">
     <tr>
         <th>Email</th>
         <th>Phone number</th>
@@ -26,10 +26,10 @@
         <tr>
             <th>${user.email}</th>
             <th>${user.phoneNumber}</th>
-            <th>${user.active}</th>
-            <th><#list user.roles as role><${role}<#sep>, </#list></th>
+            <th><#if user.active>true<#else>false</#if></th>
+            <th><#list user.roles as role>${role}</#list></th>
             <th>
-                <form action="/admin/user/ban/${user.id}">
+                <form action="/admin/user/ban/${user.id}" method="post">
                     <input type="hidden" name="_csrf" value="${_csrf.token}">
                     <input type="submit" value="Ban">
                 </form>
